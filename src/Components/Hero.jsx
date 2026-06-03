@@ -41,9 +41,9 @@ const Hero = () => {
 
   return (
     <section className="bg-black text-white">
-      <div className="mx-auto flex min-h-[85vh] max-w-7xl flex-col items-center justify-between px-6 lg:flex-row">
+      <div className="mx-auto flex min-h-[85vh] max-w-7xl flex-col items-center justify-between overflow-hidden px-6 lg:flex-row">
         {/* Left Side */}
-        <div className="max-w-2xl">
+        <div className="max-w-2xl w-full">
           <p className="mb-6 inline-block rounded-full border border-orange-500 px-4 py-2 text-sm text-orange-500">
             NEW COLLECTION
           </p>
@@ -98,8 +98,8 @@ const Hero = () => {
 
           <img
             src={slides[currentSlide].image}
-            alt="HOLLS Products"
-            className="relative w-full max-w-[750px] object-contain"
+            alt="Hero"
+            className="relative w-full max-w-md lg:max-w-[750px] object-contain"
           />
         </div>
       </div>

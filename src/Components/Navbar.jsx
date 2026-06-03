@@ -6,10 +6,10 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-zinc-800 bg-black text-white">
       {/* First Row */}
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex w-full max-w-7xl items-center gap-6 overflow-x-auto whitespace-nowrap px-4 py-3 text-sm font-medium">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="HOLLS Logo" className="h-25 w-auto" />
+          <img src={logo} alt="HOLLS Logo" className="h-16 w-auto  md:h-25" />
         </Link>
 
         {/* Search */}
@@ -27,7 +27,7 @@ const Navbar = () => {
         </div>
 
         {/* Icons */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 md:gap-6">
           <Link to="/products" className="transition hover:text-orange-500">
             Products
           </Link>
@@ -60,35 +60,35 @@ const Navbar = () => {
 
           <Link
             to="/products"
-            className="border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
+            className="shrink-0border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             Gadgets
           </Link>
 
           <Link
             to="/products"
-            className="border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
+            className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             Fashion
           </Link>
 
           <Link
             to="/products"
-            className="border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
+            className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             Kitchenware
           </Link>
 
           <Link
             to="/products"
-            className="border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
+            className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             Deals
           </Link>
 
           <Link
             to="/products"
-            className="border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
+            className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             New Arrivals
           </Link>
