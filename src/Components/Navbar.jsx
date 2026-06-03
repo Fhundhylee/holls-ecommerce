@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-zinc-800 bg-black text-white">
       {/* First Row */}
-      <div className="mx-auto flex w-full max-w-7xl items-center gap-6 overflow-x-auto whitespace-nowrap px-4 py-3 text-sm font-medium">
+      <div className="mx-auto flex max-w-7xl items-center gap-8 overflow-x-auto whitespace-nowrap px-6 py-3 text-sm font-medium scrollbar-hide">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="HOLLS Logo" className="h-16 w-auto  md:h-25" />
@@ -49,7 +49,7 @@ const Navbar = () => {
       </div>
 
       {/* Second Row */}
-      <div className="border-t border-zinc-800">
+      <div className="border-t border-zinc-800 overflow-x-auto">
         <div className="mx-auto flex max-w-7xl items-center gap-8 px-6 py-3 text-sm font-medium">
           <Link
             to="/"
