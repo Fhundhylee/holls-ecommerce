@@ -49,57 +49,12 @@ const Navbar = () => {
       </div>
 
       {/* Second Row */}
-      {/* Second Row */}
+
       <div className="border-t border-zinc-800 overflow-x-auto scrollbar-hide">
         <div className="flex w-max items-center gap-8 px-6 py-3 text-sm font-medium">
           <Link
             to="/"
             className="shrink-0 border-b-2 border-orange-500 pb-1 text-orange-500 transition hover:text-white"
-          >
-            Home
-          </Link>
-
-          <Link
-            to="/products"
-            className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
-          >
-            Gadgets
-          </Link>
-
-          <Link
-            to="/products"
-            className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
-          >
-            Fashion
-          </Link>
-
-          <Link
-            to="/products"
-            className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
-          >
-            Kitchenware
-          </Link>
-
-          <Link
-            to="/products"
-            className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
-          >
-            Deals
-          </Link>
-
-          <Link
-            to="/products"
-            className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
-          >
-            New Arrivals
-          </Link>
-        </div>
-      </div>
-      <div className="border-t border-zinc-800 overflow-x-auto">
-        <div className="mx-auto flex max-w-7xl items-center gap-8 px-6 py-3 text-sm font-medium">
-          <Link
-            to="/"
-            className="text-orange-500 transition hover:text-white border-b-2 border-orange-500 pb-1"
           >
             Home
           </Link>
