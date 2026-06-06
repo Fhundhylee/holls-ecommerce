@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { Search, ShoppingCart, User } from "lucide-react";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
+  const { cartCount } = useContext(CartContext);
   return (
-    <nav className="sticky top-0 z-50 border-b border-zinc-800 bg-black text-white">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800/50 bg-black/70 backdrop-blur-xl text-white">
       {/* First Row */}
       <div className="mx-auto flex max-w-7xl items-center gap-8 overflow-x-auto whitespace-nowrap px-6 py-3 text-sm font-medium scrollbar-hide">
         {/* Logo */}
@@ -42,7 +45,7 @@ const Navbar = () => {
           >
             <ShoppingCart />
             <span className="absolute -right-2 -top-2 rounded-full bg-orange-500 px-1 text-xs">
-              0
+              {cartCount}
             </span>
           </Link>
         </div>
