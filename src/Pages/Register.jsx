@@ -1,6 +1,52 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Register = () => {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newErrors = {};
+
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required.";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!formData.email.includes("@")) {
+      newErrors.email = "Please enter a valid email.";
+    }
+
+    if (!formData.password.trim()) {
+      newErrors.password = "Password is required.";
+    } else if (formData.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters.";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      navigate("/");
+    }
+  };
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-black px-6 py-16 text-white">
       {/* Background Glow */}
@@ -21,24 +67,48 @@ const Register = () => {
             Join the HOLLS family
           </p>
 
-          <form className="space-y-5">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full rounded-lg border border-white/10 bg-black/30 px-4 py-3 outline-none backdrop-blur-sm transition focus:border-orange-500"
-            />
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+              <input
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                placeholder="Full Name"
+                className="w-full rounded-lg border border-white/10 bg-black/30 px-4 py-3 outline-none backdrop-blur-sm transition focus:border-orange-500"
+              />
+              {errors.fullName && (
+                <p className="mt-2 text-sm text-red-500">{errors.fullName}</p>
+              )}
+            </div>
 
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full rounded-lg border border-white/10 bg-black/30 px-4 py-3 outline-none backdrop-blur-sm transition focus:border-orange-500"
-            />
+            <div>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                className="w-full rounded-lg border border-white/10 bg-black/30 px-4 py-3 outline-none backdrop-blur-sm transition focus:border-orange-500"
+              />
+              {errors.email && (
+                <p className="mt-2 text-sm text-red-500">{errors.email}</p>
+              )}
+            </div>
 
-            <input
-              type="password"
-              placeholder="Password"
-              className="w-full rounded-lg border border-white/10 bg-black/30 px-4 py-3 outline-none backdrop-blur-sm transition focus:border-orange-500"
-            />
+            <div>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Password"
+                className="w-full rounded-lg border border-white/10 bg-black/30 px-4 py-3 outline-none backdrop-blur-sm transition focus:border-orange-500"
+              />
+              {errors.password && (
+                <p className="mt-2 text-sm text-red-500">{errors.password}</p>
+              )}
+            </div>
 
             <button
               type="submit"
@@ -52,6 +122,15 @@ const Register = () => {
             Already have an account?{" "}
             <Link to="/login" className="text-orange-500 hover:underline">
               Login
+            </Link>
+          </p>
+
+          <p className="mt-4 text-center">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-zinc-400 transition hover:text-orange-500"
+            >
+              ← Back to Home
             </Link>
           </p>
         </div>

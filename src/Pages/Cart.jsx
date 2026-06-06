@@ -98,6 +98,14 @@ const Cart = () => {
                 </div>
               </div>
             </div>
+            <p className="mt-4 text-center text-zinc-400">
+              <Link
+                to="/"
+                className="mb-8 inline-flex items-center gap-2 text-zinc-400 transition hover:text-orange-500"
+              >
+                ← Back to Home
+              </Link>
+            </p>
           </>
         )}
       </div>

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import {Link, useParams } from "react-router-dom";
 import products from "../data/products";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
@@ -18,7 +18,16 @@ const ProductDetails = () => {
   }
 
   return (
-    <section className="min-h-screen bg-black px-6 py-16 text-white">
+  <section className="min-h-screen bg-black px-6 py-16 text-white">
+
+    <Link
+      to="/"
+      className="mb-8 inline-block text-orange-500 transition hover:text-orange-400"
+    >
+      ← Back to Home
+    </Link>
+   
+      
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
         {/* Image */}
         <div className="flex items-center justify-center rounded-2xl border border-zinc-800 bg-zinc-950 p-8">

@@ -31,7 +31,7 @@ const Navbar = () => {
 
         {/* Icons */}
         <div className="flex items-center gap-4 md:gap-6">
-          <Link to="/products" className="transition hover:text-orange-500">
+          <Link to="/" className="transition hover:text-orange-500">
             Products
           </Link>
 
