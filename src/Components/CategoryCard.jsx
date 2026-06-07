@@ -9,9 +9,7 @@ const CategoryCard = ({ title, description, image }) => {
 
           <p className="mb-6 text-zinc-400">{description}</p>
 
-          <Link to="/products" className="font-semibold text-orange-500">
-            Shop Now →
-          </Link>
+          <Link to={`/category/${title.toLowerCase()}`}>Shop Now →</Link>
         </div>
 
         <div className="absolute right-8 top-1/2 h-24 w-24 -translate-y-1/2 rounded-full bg-orange-500/10 blur-3xl"></div>

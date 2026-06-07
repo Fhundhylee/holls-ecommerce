@@ -63,21 +63,21 @@ const Navbar = () => {
           </Link>
 
           <Link
-            to="/products"
+            to="/category/gadgets"
             className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             Gadgets
           </Link>
 
           <Link
-            to="/products"
+            to="/category/fashion"
             className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             Fashion
           </Link>
 
           <Link
-            to="/products"
+            to="/category/kitchenware"
             className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             Kitchenware

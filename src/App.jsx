@@ -6,7 +6,9 @@ import Cart from "./Pages/Cart";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import ProductDetails from "./Pages/ProductDetails";
-
+import Checkout from "./Pages/Checkout";
+import Products from "./Pages/Products";
+import CategoryPage from "./Pages/CategoryPage";
 function App() {
   return (
     <div className="min-h-screen bg-black pt-36 md:pt-32">
@@ -18,6 +20,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/category/:categoryName" element={<CategoryPage />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
     </div>
   );

@@ -1,5 +1,6 @@
 import ProductCard from "./ProductCard";
 import products from "../data/products";
+import { Link } from "react-router-dom";
 
 const ProductGrid = () => {
   return (
@@ -8,9 +9,12 @@ const ProductGrid = () => {
         <div className="mb-10 flex items-center justify-between">
           <h2 className="text-3xl font-bold">Featured Products</h2>
 
-          <button className="text-orange-500 transition hover:text-orange-400">
+          <Link
+            to="/products"
+            className="text-orange-500 transition hover:text-orange-400"
+          >
             View all products →
-          </button>
+          </Link>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">

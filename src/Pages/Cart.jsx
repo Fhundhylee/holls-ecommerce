@@ -92,9 +92,12 @@ const Cart = () => {
                     Continue Shopping
                   </Link>
 
-                  <button className="rounded-lg bg-orange-500 px-6 py-3 font-semibold transition hover:bg-orange-600">
+                  <Link
+                    to="/checkout"
+                    className="rounded-lg bg-orange-500 px-6 py-3 text-center font-semibold transition hover:bg-orange-600"
+                  >
                     Checkout
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -12,6 +12,7 @@ const products = [
     price: 599,
     image: watch,
     rating: 4.9,
+    category: "gadgets",
     description:
       "The latest Apple Watch with advanced health tracking, fitness features, and a premium titanium design.",
   },
@@ -22,6 +23,7 @@ const products = [
     price: 449,
     image: headset,
     rating: 4.8,
+    category: "gadgets",
     description:
       "Industry-leading noise cancellation headphones with exceptional sound quality and long battery life.",
   },
@@ -32,6 +34,7 @@ const products = [
     price: 1499,
     image: camera,
     rating: 4.9,
+    category: "gadgets",
     description:
       "A professional full-frame mirrorless camera designed for creators and photographers.",
   },
@@ -42,6 +45,7 @@ const products = [
     price: 140,
     image: nike,
     rating: 4.7,
+    category: "fashion",
     description:
       "An iconic sneaker combining timeless style, comfort, and durability for everyday wear.",
   },
@@ -52,6 +56,7 @@ const products = [
     price: 399,
     image: blender,
     rating: 4.8,
+    category: "kitchenware",
     description:
       "A premium stand mixer perfect for baking, cooking, and creating delicious recipes.",
   },
@@ -62,6 +67,7 @@ const products = [
     price: 1299,
     image: iphone,
     rating: 5.0,
+    category: "gadgets",
     description:
       "Apple's flagship smartphone featuring cutting-edge performance, a stunning display, and an advanced camera system.",
   },

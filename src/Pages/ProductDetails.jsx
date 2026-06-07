@@ -1,10 +1,11 @@
-import {Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import products from "../data/products";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const { addToCart } = useContext(CartContext);
   const product = products.find((item) => item.id === Number(id));
@@ -18,16 +19,14 @@ const ProductDetails = () => {
   }
 
   return (
-  <section className="min-h-screen bg-black px-6 py-16 text-white">
+    <section className="min-h-screen bg-black px-6 py-16 text-white">
+      <Link
+        to="/"
+        className="mb-8 inline-block text-orange-500 transition hover:text-orange-400"
+      >
+        ← Back to Home
+      </Link>
 
-    <Link
-      to="/"
-      className="mb-8 inline-block text-orange-500 transition hover:text-orange-400"
-    >
-      ← Back to Home
-    </Link>
-   
-      
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
         {/* Image */}
         <div className="flex items-center justify-center rounded-2xl border border-zinc-800 bg-zinc-950 p-8">
@@ -60,7 +59,13 @@ const ProductDetails = () => {
               Add to Cart
             </button>
 
-            <button className="rounded-lg border border-zinc-700 px-8 py-3 font-semibold transition hover:border-orange-500">
+            <button
+              onClick={() => {
+                addToCart(product);
+                navigate("/checkout");
+              }}
+              className="rounded-lg border border-zinc-700 px-8 py-3 font-semibold transition hover:border-orange-500"
+            >
               Buy Now
             </button>
           </div>
