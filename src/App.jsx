@@ -9,6 +9,8 @@ import ProductDetails from "./Pages/ProductDetails";
 import Checkout from "./Pages/Checkout";
 import Products from "./Pages/Products";
 import CategoryPage from "./Pages/CategoryPage";
+import Deals from "./Pages/Deals";
+import NewArrivals from "./Pages/NewArrivals";
 function App() {
   return (
     <div className="min-h-screen bg-black pt-36 md:pt-32">
@@ -23,6 +25,8 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/category/:categoryName" element={<CategoryPage />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/deals" element={<Deals />} />
+        <Route path="/new-arrivals" element={<NewArrivals />} />
       </Routes>
     </div>
   );

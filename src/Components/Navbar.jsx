@@ -84,14 +84,14 @@ const Navbar = () => {
           </Link>
 
           <Link
-            to="/products"
+            to="/deals"
             className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             Deals
           </Link>
 
           <Link
-            to="/products"
+            to="/new-arrivals"
             className="shrink-0 border-b-2 border-transparent pb-1 transition-all duration-300 hover:border-orange-500 hover:text-orange-500"
           >
             New Arrivals

@@ -13,6 +13,8 @@ const products = [
     image: watch,
     rating: 4.9,
     category: "gadgets",
+    isDeal: true,
+    isNew: true,
     description:
       "The latest Apple Watch with advanced health tracking, fitness features, and a premium titanium design.",
   },
@@ -35,6 +37,8 @@ const products = [
     image: camera,
     rating: 4.9,
     category: "gadgets",
+    isDeal: true,
+    isNew: true,
     description:
       "A professional full-frame mirrorless camera designed for creators and photographers.",
   },
@@ -68,6 +72,7 @@ const products = [
     image: iphone,
     rating: 5.0,
     category: "gadgets",
+    isDeal: true,
     description:
       "Apple's flagship smartphone featuring cutting-edge performance, a stunning display, and an advanced camera system.",
   },
